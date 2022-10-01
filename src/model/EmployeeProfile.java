@@ -14,11 +14,30 @@ public class EmployeeProfile {
     private int employeeId;
     private int age;
     private String gender;
-    private int startDate;
+    private String startDate;
     private int level;
     private String teamInfo;
     private String positionTitle;   
 
+    private int cellPhoneNumber;                  
+    private String emailAddress;
+
+    public int getCellPhoneNumber() {
+        return cellPhoneNumber;
+    }
+
+    public void setCellPhoneNumber(int cellPhoneNumber) {
+        this.cellPhoneNumber = cellPhoneNumber;
+    }
+
+    public String getEmailAddress() {
+        return emailAddress;
+    }
+
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
+    }
+    
     public String getName() {
         return name;
     }
@@ -51,12 +70,13 @@ public class EmployeeProfile {
         this.gender = gender;
     }
 
-    public int getStartDate() {
+    public String getStartDate(){
         return startDate;
     }
-
-    public void setStartDate(int startDate) {
-        this.startDate = startDate;
+    
+    public void setStartDate(String startDate)
+    {
+        this.startDate= startDate;
     }
 
     public int getLevel() {
@@ -81,6 +101,11 @@ public class EmployeeProfile {
 
     public void setPositionTitle(String positionTitle) {
         this.positionTitle = positionTitle;
+    }
+
+    @Override
+    public String toString() {
+        return "EmployeeProfile{" + "name=" + name + ", employeeId=" + employeeId + ", age=" + age + ", gender=" + gender + ", startDate=" + startDate + ", level=" + level + ", teamInfo=" + teamInfo + ", positionTitle=" + positionTitle + ", cellPhoneNumber=" + cellPhoneNumber + ", emailAddress=" + emailAddress + '}';
     }
 
     

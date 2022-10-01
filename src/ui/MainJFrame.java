@@ -4,6 +4,8 @@
  */
 package ui;
 
+import model.EmployeeProfileHistory;
+
 /**
  *
  * @author sunayanashivanagi
@@ -13,8 +15,12 @@ public class MainJFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainJFrame
      */
+    EmployeeProfileHistory eph;
+    
+    
     public MainJFrame() {
         initComponents();
+        eph= new EmployeeProfileHistory();
     }
 
     /**
@@ -39,6 +45,11 @@ public class MainJFrame extends javax.swing.JFrame {
         btnView.setText("View Employee");
 
         btnCreate.setText("Create Employee");
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCreateActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -95,6 +106,13 @@ public class MainJFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+        // TODO add your handling code here:
+        CreateEJPanel eJPanel= new CreateEJPanel(eph);
+        splitPanel.setRightComponent(eJPanel);
+        
+    }//GEN-LAST:event_btnCreateActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,6 +4,10 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
+import model.EmployeeProfile;
+import model.EmployeeProfileHistory;
+
 /**
  *
  * @author sunayanashivanagi
@@ -13,8 +17,10 @@ public class CreateEJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateEJPanel
      */
-    public CreateEJPanel() {
+    EmployeeProfileHistory eph;
+    public CreateEJPanel(EmployeeProfileHistory eph) {
         initComponents();
+        this.eph = eph;
     }
 
     /**
@@ -47,8 +53,8 @@ public class CreateEJPanel extends javax.swing.JPanel {
         txtCellPhoneNumber = new javax.swing.JLabel();
         txtEmailAddress = new javax.swing.JLabel();
         emailAddress = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnReset = new javax.swing.JButton();
+        btnCreate = new javax.swing.JButton();
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 51, 153));
@@ -75,15 +81,15 @@ public class CreateEJPanel extends javax.swing.JPanel {
 
         txtEmailAddress.setText("Email Address:");
 
-        jButton1.setBackground(new java.awt.Color(204, 204, 204));
-        jButton1.setText("Reset");
+        btnReset.setBackground(new java.awt.Color(204, 204, 204));
+        btnReset.setText("Reset");
 
-        jButton2.setBackground(new java.awt.Color(51, 0, 153));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Create");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnCreate.setBackground(new java.awt.Color(51, 0, 153));
+        btnCreate.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreate.setText("Create");
+        btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnCreateActionPerformed(evt);
             }
         });
 
@@ -96,9 +102,9 @@ public class CreateEJPanel extends javax.swing.JPanel {
                 .addGap(98, 98, 98)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton1)
+                        .addComponent(btnReset)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton2))
+                        .addComponent(btnCreate))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtEmailAddress)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -187,25 +193,62 @@ public class CreateEJPanel extends javax.swing.JPanel {
                     .addComponent(emailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(btnReset)
+                    .addComponent(btnCreate))
                 .addGap(0, 143, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+       String nameip= name.getText();
+       int employeeIdip = Integer.parseInt(employeeId.getText());
+       int ageip = Integer.parseInt(age.getText());
+       String genderip= gender.getText();
+       String startDateip= startDate.getText();
+       int levelip= Integer.parseInt(level.getText());
+       String teamInfoip = teamInfo.getText();
+       String positionTitleip= positionTitle.getText();
+       int cellPhoneNumberip= Integer.parseInt(cellPhoneNumber.getText());
+       String emailAddressip = emailAddress.getText();
+       
+       EmployeeProfile ep = new EmployeeProfile();
+       ep.setName(nameip);
+       ep.setEmployeeId(employeeIdip);
+       ep.setAge(ageip);
+       ep.setGender(genderip);
+       ep.setStartDate(startDateip);
+       ep.setLevel(levelip);
+       ep.setTeamInfo(teamInfoip);
+       ep.setPositionTitle(positionTitleip);
+       ep.setCellPhoneNumber(cellPhoneNumberip);
+       ep.setEmailAddress(emailAddressip);
+       
+       eph.addNewEmployee(ep);
+       
+       name.setText("");
+       employeeId.setText("");
+       age.setText("");
+       gender.setText("");
+       startDate.setText("");
+       level.setText("");
+       teamInfo.setText("");
+       positionTitle.setText("");
+       cellPhoneNumber.setText("");
+       emailAddress.setText("");
+       
+       JOptionPane.showMessageDialog(this,"New Employee Details was added "+ep);
+    }//GEN-LAST:event_btnCreateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField age;
+    private javax.swing.JButton btnCreate;
+    private javax.swing.JButton btnReset;
     private javax.swing.JTextField cellPhoneNumber;
     private javax.swing.JTextField emailAddress;
     private javax.swing.JTextField employeeId;
     private javax.swing.JTextField gender;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField level;
     private javax.swing.JTextField name;

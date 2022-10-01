@@ -29,6 +29,7 @@ public class EmployeeProfileHistory {
     
     public EmployeeProfile addNewEmployee(EmployeeProfile employeeProfile){
       history.add(employeeProfile);
+      System.out.println("Employee Added->"+employeeProfile);
       return employeeProfile;     
     }
     

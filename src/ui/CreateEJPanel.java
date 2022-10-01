@@ -81,7 +81,8 @@ public class CreateEJPanel extends javax.swing.JPanel {
 
         txtEmailAddress.setText("Email Address:");
 
-        btnReset.setBackground(new java.awt.Color(204, 204, 204));
+        btnReset.setBackground(new java.awt.Color(0, 102, 0));
+        btnReset.setForeground(new java.awt.Color(255, 255, 255));
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

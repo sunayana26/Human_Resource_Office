@@ -108,6 +108,22 @@ public class EmployeeProfile {
         return "EmployeeProfile{" + "name=" + name + ", employeeId=" + employeeId + ", age=" + age + ", gender=" + gender + ", startDate=" + startDate + ", level=" + level + ", teamInfo=" + teamInfo + ", positionTitle=" + positionTitle + ", cellPhoneNumber=" + cellPhoneNumber + ", emailAddress=" + emailAddress + '}';
     }
 
+    public EmployeeProfile(String name, int employeeId, int age, String gender, String startDate, int level, String teamInfo, String positionTitle, int cellPhoneNumber, String emailAddress) {
+        this.name = name;
+        this.employeeId = employeeId;
+        this.age = age;
+        this.gender = gender;
+        this.startDate = startDate;
+        this.level = level;
+        this.teamInfo = teamInfo;
+        this.positionTitle = positionTitle;
+        this.cellPhoneNumber = cellPhoneNumber;
+        this.emailAddress = emailAddress;
+    }
+
+    public EmployeeProfile() {
+    }
+
     
     
    

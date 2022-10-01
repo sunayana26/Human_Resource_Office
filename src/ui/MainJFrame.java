@@ -43,6 +43,11 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(153, 153, 255));
 
         btnView.setText("View Employee");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
 
         btnCreate.setText("Create Employee");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
@@ -113,6 +118,12 @@ public class MainJFrame extends javax.swing.JFrame {
         splitPanel.setRightComponent(eJPanel);
         
     }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+        ViewJPanel eJPanel= new ViewJPanel(eph);
+        splitPanel.setRightComponent(eJPanel);
+    }//GEN-LAST:event_btnViewActionPerformed
 
     /**
      * @param args the command line arguments

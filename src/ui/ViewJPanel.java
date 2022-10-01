@@ -5,6 +5,7 @@
 package ui;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import model.EmployeeProfile;
 import model.EmployeeProfileHistory;
 
@@ -21,6 +22,7 @@ public class ViewJPanel extends javax.swing.JPanel {
     public ViewJPanel(EmployeeProfileHistory eph) {
         initComponents();
         this.eph = eph;
+        populateTable();
     }
 
     /**
@@ -354,4 +356,25 @@ public class ViewJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel txtStartDate;
     private javax.swing.JLabel txtStartDate1;
     // End of variables declaration//GEN-END:variables
-}
+
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) tbEmployeeHistory.getModel();
+        model.setRowCount(0);
+        
+       for(EmployeeProfile e:eph.getHistory()) 
+       {
+           Object row[] = new Object[10];
+           row[0]= e.getEmployeeId();
+           row[1]=e.getName();
+           row[2]=e.getAge();
+           row[3]=e.getGender();
+           row[4]=e.getStartDate();
+           row[5]=e.getLevel();
+           row[6]=e.getTeamInfo();
+           row[7]=e.getPositionTitle();
+           row[8]=e.getCellPhoneNumber();
+           row[9]=e.getEmailAddress();
+           
+           model.addRow(row);    
+    }
+    }}

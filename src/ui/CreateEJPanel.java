@@ -83,6 +83,11 @@ public class CreateEJPanel extends javax.swing.JPanel {
 
         btnReset.setBackground(new java.awt.Color(204, 204, 204));
         btnReset.setText("Reset");
+        btnReset.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnResetActionPerformed(evt);
+            }
+        });
 
         btnCreate.setBackground(new java.awt.Color(51, 0, 153));
         btnCreate.setForeground(new java.awt.Color(255, 255, 255));
@@ -239,6 +244,21 @@ public class CreateEJPanel extends javax.swing.JPanel {
        
        JOptionPane.showMessageDialog(this,"New Employee Details was added "+ep);
     }//GEN-LAST:event_btnCreateActionPerformed
+
+    private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
+        // TODO add your handling code here:
+       name.setText("");
+       employeeId.setText("");
+       age.setText("");
+       gender.setText("");
+       startDate.setText("");
+       level.setText("");
+       teamInfo.setText("");
+       positionTitle.setText("");
+       cellPhoneNumber.setText("");
+       emailAddress.setText("");
+       
+    }//GEN-LAST:event_btnResetActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

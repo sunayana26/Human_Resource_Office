@@ -45,7 +45,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtName = new javax.swing.JLabel();
         name = new javax.swing.JTextField();
         startDate = new javax.swing.JTextField();
-        btnCreate = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
         txtEmployeeId = new javax.swing.JLabel();
         employeeId = new javax.swing.JTextField();
         txtAge = new javax.swing.JLabel();
@@ -97,7 +97,7 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnEdit.setBackground(new java.awt.Color(0, 0, 204));
+        btnEdit.setBackground(new java.awt.Color(51, 0, 153));
         btnEdit.setForeground(new java.awt.Color(255, 255, 255));
         btnEdit.setText("Edit");
         btnEdit.addActionListener(new java.awt.event.ActionListener() {
@@ -118,12 +118,12 @@ public class ViewJPanel extends javax.swing.JPanel {
             }
         });
 
-        btnCreate.setBackground(new java.awt.Color(51, 0, 153));
-        btnCreate.setForeground(new java.awt.Color(255, 255, 255));
-        btnCreate.setText("Update");
-        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate.setBackground(new java.awt.Color(51, 0, 153));
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateActionPerformed(evt);
+                btnUpdateActionPerformed(evt);
             }
         });
 
@@ -209,7 +209,7 @@ public class ViewJPanel extends javax.swing.JPanel {
                                 .addComponent(level, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnCreate)
+                        .addComponent(btnUpdate)
                         .addGap(250, 250, 250))))
         );
         layout.setVerticalGroup(
@@ -265,21 +265,57 @@ public class ViewJPanel extends javax.swing.JPanel {
                             .addComponent(txtStartDate1)
                             .addComponent(emailAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(18, 18, 18)
-                .addComponent(btnCreate)
+                .addComponent(btnUpdate)
                 .addGap(0, 145, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
         // TODO add your handling code here:
+        int selectedRow = tbEmployeeHistory.getSelectedRow();
+        if(selectedRow<0)
+        {
+            JOptionPane.showMessageDialog(this, "Please select a row to delete");
+            return;
+        }
+        else{
+            eph.deleteEmployee(selectedRow);
+            populateTable();
+            JOptionPane.showMessageDialog(this, "Employee Deleted");
+        }  
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditActionPerformed
         // TODO add your handling code here:
+        int selectedRow = tbEmployeeHistory.getSelectedRow();
+        if(selectedRow<0)
+        {
+            JOptionPane.showMessageDialog(this, "Please select a row to edit");
+            return;
+        }
+        
+        EmployeeProfile ep= eph.getHistory().get(selectedRow);
+        age.setText(String.valueOf(ep.getAge()));
+         cellPhoneNumber.setText(String.valueOf(ep.getCellPhoneNumber()));
+          employeeId.setText(String.valueOf(ep.getEmployeeId()));
+           gender.setText(String.valueOf(ep.getGender()));
+            level.setText(String.valueOf(ep.getLevel()));
+             name.setText(String.valueOf(ep.getName()));
+             positionTitle.setText(String.valueOf(ep.getPositionTitle()));
+             startDate.setText(String.valueOf(ep.getStartDate()));
+             teamInfo.setText(String.valueOf(ep.getTeamInfo())); 
+             emailAddress.setText(String.valueOf(ep.getEmailAddress()));
     }//GEN-LAST:event_btnEditActionPerformed
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
+        int selectedRow = tbEmployeeHistory.getSelectedRow();
+        if(selectedRow<0)
+        {
+            JOptionPane.showMessageDialog(this, "Please select a row to update");
+            return;
+        }
+        
         String nameip= name.getText();
         int employeeIdip = Integer.parseInt(employeeId.getText());
         int ageip = Integer.parseInt(age.getText());
@@ -302,8 +338,9 @@ public class ViewJPanel extends javax.swing.JPanel {
         ep.setPositionTitle(positionTitleip);
         ep.setCellPhoneNumber(cellPhoneNumberip);
         ep.setEmailAddress(emailAddressip);
+        
 
-        eph.addNewEmployee(ep);
+        eph.updateEmployee(ep,selectedRow);
 
         name.setText("");
         employeeId.setText("");
@@ -316,8 +353,9 @@ public class ViewJPanel extends javax.swing.JPanel {
         cellPhoneNumber.setText("");
         emailAddress.setText("");
 
-        JOptionPane.showMessageDialog(this,"New Employee Details was added "+ep);
-    }//GEN-LAST:event_btnCreateActionPerformed
+        JOptionPane.showMessageDialog(this,"New Employee Details was updated ");
+        populateTable();
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void nameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameActionPerformed
         // TODO add your handling code here:
@@ -330,9 +368,9 @@ public class ViewJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField age;
-    private javax.swing.JButton btnCreate;
     private javax.swing.JButton btnDelete;
     private javax.swing.JButton btnEdit;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JTextField cellPhoneNumber;
     private javax.swing.JTextField emailAddress;
     private javax.swing.JTextField employeeId;

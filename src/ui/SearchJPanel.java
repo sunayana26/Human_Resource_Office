@@ -25,8 +25,8 @@ public class SearchJPanel extends javax.swing.JPanel {
     EmployeeProfileHistory eph;
     public SearchJPanel(EmployeeProfileHistory eph) {
         initComponents();
-        this.eph= eph;
-        populateTable();
+        setEph(eph);
+        populateTable(getEph());
     
     }
 
@@ -93,6 +93,11 @@ public class SearchJPanel extends javax.swing.JPanel {
         jLabel3.setText("Select a field");
 
         btnSearch.setText("Search");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -144,8 +149,142 @@ public class SearchJPanel extends javax.swing.JPanel {
 
     private void searchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchActionPerformed
         // TODO add your handling code here:
+        
+        
     }//GEN-LAST:event_searchActionPerformed
- private void populateTable() {
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Name"))
+            searchByName(search.getText());
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Employee ID"))
+            searchByEmployeeId(Integer.parseInt(search.getText()));
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Age"))
+            searchByAge(Integer.parseInt(search.getText()));
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Gender"))
+            searchByGender(search.getText());
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Start Date"))
+            searchByStartDate(search.getText());
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Level"))
+            searchByLevel(Integer.parseInt(search.getText()));
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Team Info"))
+            searchByTeamInfo(search.getText());
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Position Title"))
+            searchByPositionTitle(search.getText());
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("CellPhone Number"))
+            searchByCellPhoneNumber(Integer.parseInt(search.getText()));
+        if(drpFields.getSelectedItem().toString().equalsIgnoreCase("Email Address"))
+            searchByEmailAddress(search.getText());
+    }//GEN-LAST:event_btnSearchActionPerformed
+
+    public EmployeeProfileHistory getEph() {
+        return eph;
+    }
+
+    public void setEph(EmployeeProfileHistory eph) {
+        this.eph = eph;
+    }
+    
+    private void searchByEmployeeId(int eid){
+        
+        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getEmployeeId()==eid){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);
+    }
+    private void searchByAge(int age){
+        
+        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getAge()==age){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);
+    }
+    private void searchByGender(String gender){
+        
+        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getGender().equalsIgnoreCase(gender)){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);
+    }
+    private void searchByStartDate(String date){
+        
+//        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+//        temp.deleteAll();
+//        for(EmployeeProfile ep: getEph().getHistory()){
+//            if(ep.getStartDate().compareTo(new Date(date))>0){
+//                temp.addNewEmployee(ep);
+//            }
+//        }
+//        populateTable(temp);
+    }
+    private void searchByLevel(int level){
+        
+        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getLevel()==level){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);
+    }
+    private void searchByTeamInfo(String teamInfo){
+        
+        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getTeamInfo().equalsIgnoreCase(teamInfo)){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);
+    }
+    private void searchByPositionTitle(String positionTitle){
+        
+        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getPositionTitle().equalsIgnoreCase(positionTitle)){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);
+    }
+    private void searchByCellPhoneNumber(int cpn){
+        
+        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getCellPhoneNumber()==cpn){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);
+    }
+    private void searchByEmailAddress(String email){
+        
+        EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getEmailAddress().equalsIgnoreCase(email)){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);
+    }
+ private void populateTable(EmployeeProfileHistory eph) {
         DefaultTableModel model = (DefaultTableModel) tbEmployeeHistory.getModel();
         model.setRowCount(0);
         
@@ -178,4 +317,16 @@ public class SearchJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField search;
     private javax.swing.JTable tbEmployeeHistory;
     // End of variables declaration//GEN-END:variables
+
+    private void searchByName(String text) {
+       EmployeeProfileHistory temp=new EmployeeProfileHistory();
+        temp.deleteAll();
+        for(EmployeeProfile ep: getEph().getHistory()){
+            if(ep.getName().equalsIgnoreCase(text)){
+                temp.addNewEmployee(ep);
+            }
+        }
+        populateTable(temp);   
+        
+    }
 }

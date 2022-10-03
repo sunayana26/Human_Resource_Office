@@ -11,7 +11,7 @@ import java.util.Date;
 
 /**
  *
- * @author vigy
+ * @author sunayanashivanagi
  */
 public class EmployeeProfile {
     
@@ -24,8 +24,10 @@ public class EmployeeProfile {
     private String teamInfo ;
     private String positionTitle ;
     private Image photo;
-    private int cellPhoneNumber;
+    private long cellPhoneNumber;
     private String emailAddress;
+    
+    private ContactInfo contact;
     
     DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 
@@ -37,11 +39,11 @@ public class EmployeeProfile {
         this.photo = photo;
     }
 
-    public int getCellPhoneNumber() {
+    public long getCellPhoneNumber() {
         return cellPhoneNumber;
     }
 
-    public void setCellPhoneNumber(int cellPhoneNumber) {
+    public void setCellPhoneNumber(long cellPhoneNumber) {
         this.cellPhoneNumber = cellPhoneNumber;
     }
 
@@ -121,6 +123,16 @@ public class EmployeeProfile {
         this.positionTitle = positionTitle;
     }
 
+    public ContactInfo getContact() {
+        return contact;
+    }
+
+    public void setContact(ContactInfo contact) {
+        this.contact = contact;
+    }
+
+    
+    
     @Override
     public String toString() {
         return "EmployeeProfile{" + "name=" + name + ", employeeId=" + employeeId + ", age=" + age + ", gender=" + gender + ", startDate=" + startDate + ", level=" + level + ", teamInfo=" + teamInfo + ", positionTitle=" + positionTitle + ", photo=" + photo + ", cellPhoneNumber=" + cellPhoneNumber + ", emailAddress=" + emailAddress + ", dateFormat=" + dateFormat + '}';

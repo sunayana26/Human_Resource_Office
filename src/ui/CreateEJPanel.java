@@ -6,6 +6,7 @@ package ui;
 
 import java.awt.Image;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -18,11 +19,11 @@ import model.EmployeeProfileHistory;
  *
  * @author sunayanashivanagi
  */
-public class CreateEJPanel extends javax.swing.JPanel {
+public class CreateJPanel extends javax.swing.JPanel {
     
     EmployeeProfileHistory employeeProfileHistory;
     Image employeeImage;
-
+    
     public Image getEmployeeImage() {
         return employeeImage;
     }
@@ -34,7 +35,7 @@ public class CreateEJPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateJPanel
      */
-    public CreateEJPanel(EmployeeProfileHistory employeeProfileHistory) {
+    public CreateJPanel(EmployeeProfileHistory employeeProfileHistory) {
         initComponents();
         this.employeeProfileHistory=employeeProfileHistory;
     }
@@ -369,6 +370,7 @@ public class CreateEJPanel extends javax.swing.JPanel {
      valTeamInfo.setText("");
      valCellPhoneNumber.setText("");
      valEmailAddress.setText("");
+     valPhoto.setText("");
      
      if(validation()){
          String name = txtName.getText();
@@ -379,16 +381,18 @@ public class CreateEJPanel extends javax.swing.JPanel {
      int level = Integer.parseInt(txtLevel.getText()) ;
      String teamInfo = txtTeamInfo.getText() ;
      String positionTitle= (String)drpPositionTitle.getSelectedItem() ;
-     int cellPhoneNumber = Integer.parseInt(txtCellPhoneNumber.getText()) ;
+     long cellPhoneNumber = Long.parseLong(txtCellPhoneNumber.getText()) ;
      String emailAddress= txtEmailAddress.getText();
      
      
      EmployeeProfile ep = new EmployeeProfile();
-     ContactInfo ci=new ContactInfo();
-     
+     ContactInfo ci = new ContactInfo();
+     ci.setEmailAddress(emailAddress);
+     ci.setCellPhoneNumber(cellPhoneNumber);
+     ep.setContact(ci);
      ep.setName(name);
-     ep.setCellPhoneNumber(cellPhoneNumber);
-     ep.setEmailAddress(emailAddress);
+     // ep.setCellPhoneNumber(cellPhoneNumber);
+     // ep.setEmailAddress(emailAddress);
      ep.setEmployeeId(employeeId);
      ep.setGender(gender);
      ep.setLevel(level);
@@ -416,9 +420,7 @@ public class CreateEJPanel extends javax.swing.JPanel {
         
      
      
-     
-     
-     
+ 
     }//GEN-LAST:event_saveActionPerformed
 
     private void resetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetActionPerformed
@@ -441,6 +443,15 @@ public class CreateEJPanel extends javax.swing.JPanel {
      valTeamInfo.setText("");
      valCellPhoneNumber.setText("");
      valEmailAddress.setText("");
+        
+     //Reset validation
+     valName.setText("");
+     valEmployeeId.setText("");
+     valDate.setText("");
+     valTeamInfo.setText("");
+     valCellPhoneNumber.setText("");
+     valEmailAddress.setText("");
+     valPhoto.setText("");
     }//GEN-LAST:event_resetActionPerformed
 
     private void txtEmployeeIdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmployeeIdActionPerformed
@@ -497,16 +508,26 @@ public class CreateEJPanel extends javax.swing.JPanel {
             try 
 		{ 
 			Integer.parseInt(employeeId); 
+                        ArrayList<Integer> eids= new ArrayList<>();
+                        for(EmployeeProfile e:employeeProfileHistory.getHistory()){
+                            eids.add(e.getEmployeeId());
+                        }
+                     
+                        if(eids.contains(Integer.parseInt(employeeId))){
+                            valEmployeeId.setText("EmployeeId must be unique");
+                            validation=false;
+                        }
 		}  
 		catch (NumberFormatException e)  
 		{ 
-			valEmployeeId.setText("EmployeeId must be an Integer");
+			valEmployeeId.setText("EmployeeId must be an number");
                         validation=false;
 		} 
         }
+        
         //Date Validation
         if(startDate==null){
-            valDate.setText("Please Enter Start Sate");
+            valDate.setText("Please Enter Start Date");
                         validation=false;
         }
         //TeamInfo Validation
@@ -515,24 +536,28 @@ public class CreateEJPanel extends javax.swing.JPanel {
             validation=false;
         }
         //CellphoneNumber validation
-        if(cellPhoneNumber.length()<=0){
-            valCellPhoneNumber.setText("Please Enter CellPhoneNumber");
+        if(!cellPhoneNumber.matches("^\\d{10}$")){
+                valCellPhoneNumber.setText("Please Enter 10 digits");
+                validation=false;
+            }
+        if(cellPhoneNumber.length()<=0 || cellPhoneNumber.length()>10){
+            valCellPhoneNumber.setText("Please Enter 10 digits");
             validation=false;
         }
         else{
             try 
 		{ 
-			Integer.parseInt(employeeId); 
+			Long.parseLong(cellPhoneNumber); 
 		}  
 		catch (NumberFormatException e)  
 		{ 
-			valCellPhoneNumber.setText("CellPhoneNumber must be an Integer");
+			valCellPhoneNumber.setText("CellPhoneNumber must be an number");
                         validation=false;
 		} 
         }
         //EmailAddress Validation
-        if(emailAddress.length()<=0){
-            valEmailAddress.setText("Please Enter Email Address");
+        if(emailAddress.length()<=0 || !emailAddress.matches("^(.+)@(\\S+)$")){
+            valEmailAddress.setText("Please Enter valid Email Address");
             validation=false;
         }
         //Photo Validation

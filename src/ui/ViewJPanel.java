@@ -80,7 +80,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtEmployeeId = new javax.swing.JTextField();
         txtStartDate = new com.toedter.calendar.JDateChooser();
 
-        setBackground(new java.awt.Color(161, 103, 165));
+        setBackground(new java.awt.Color(232, 215, 241));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         createEmployeeLabel.setBackground(new java.awt.Color(153, 153, 153));
@@ -91,6 +91,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         createEmployeeLabel.setToolTipText("To create new employee");
         add(createEmployeeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 872, 39));
 
+        tblEmployeeHistory.setBackground(new java.awt.Color(232, 215, 241));
         tblEmployeeHistory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},

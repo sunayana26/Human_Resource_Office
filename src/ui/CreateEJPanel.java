@@ -82,7 +82,7 @@ public class CreateEJPanel extends javax.swing.JPanel {
         valEmailAddress = new javax.swing.JLabel();
         valPhoto = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(161, 103, 165));
+        setBackground(new java.awt.Color(232, 215, 241));
 
         createEmployeeLabel.setBackground(new java.awt.Color(153, 153, 153));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N

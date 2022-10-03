@@ -45,7 +45,7 @@ public class SearchJPanel extends javax.swing.JPanel {
         drpFields = new javax.swing.JComboBox<>();
         btnReset = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(161, 103, 165));
+        setBackground(new java.awt.Color(232, 215, 241));
 
         createEmployeeLabel.setBackground(new java.awt.Color(153, 153, 153));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N

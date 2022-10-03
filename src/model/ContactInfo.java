@@ -10,14 +10,14 @@ package model;
  */
 public class ContactInfo {
  
-    private int cellPhoneNumber;                  
+    private long cellPhoneNumber;                  
     private String emailAddress;
 
-    public int getCellPhoneNumber() {
+    public long getCellPhoneNumber() {
         return cellPhoneNumber;
     }
 
-    public void setCellPhoneNumber(int cellPhoneNumber) {
+    public void setCellPhoneNumber(long cellPhoneNumber) {
         this.cellPhoneNumber = cellPhoneNumber;
     }
 

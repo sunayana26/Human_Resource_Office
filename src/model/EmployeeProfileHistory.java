@@ -17,13 +17,6 @@ public class EmployeeProfileHistory {
 
     public EmployeeProfileHistory() {
         this.history = new ArrayList<EmployeeProfile>();
-        addNewEmployee(new EmployeeProfile("John",100,23,"Male",new Date(22,9,2),13,"CNAS","Front-End Developer",12312123,"john@n.co"));
-        addNewEmployee(new EmployeeProfile("Jose",101,25,"Female",new Date(22,9,2),10,"YELLOW","Back-End Developer",12312123,"jose@n.co"));
-        addNewEmployee(new EmployeeProfile("Adam",102,27,"Male",new Date(22,9,2),8,"ORANGE","Senior Developer",12312123,"adam@n.co"));
-        addNewEmployee(new EmployeeProfile("Karen",103,30,"female",new Date(22,9,2),6,"CNAS","Project Manager",12312123,"jose@n.co"));
-        addNewEmployee(new EmployeeProfile("Vignesh",104,25,"Male",new Date(22,9,2),13,"CNAS","Front-End Developer",12312123,"vignesh@n.co"));
-        addNewEmployee(new EmployeeProfile("Sonu",105,25,"Female",new Date(22,9,2),13,"CNAS","Front-End Developer",12312123,"sonu@n.co"));
-
     }   
 
     public ArrayList<EmployeeProfile> getHistory() {

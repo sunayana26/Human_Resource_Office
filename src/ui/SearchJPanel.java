@@ -45,13 +45,16 @@ public class SearchJPanel extends javax.swing.JPanel {
         drpFields = new javax.swing.JComboBox<>();
         btnReset = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(161, 103, 165));
+
         createEmployeeLabel.setBackground(new java.awt.Color(153, 153, 153));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        createEmployeeLabel.setForeground(new java.awt.Color(153, 153, 153));
+        createEmployeeLabel.setForeground(new java.awt.Color(0, 0, 204));
         createEmployeeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         createEmployeeLabel.setText("Search Employee");
         createEmployeeLabel.setToolTipText("To create new employee");
 
+        tblEmployeeHistory.setBackground(new java.awt.Color(161, 103, 165));
         tblEmployeeHistory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},

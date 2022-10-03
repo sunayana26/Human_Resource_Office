@@ -80,11 +80,12 @@ public class ViewJPanel extends javax.swing.JPanel {
         txtEmployeeId = new javax.swing.JTextField();
         txtStartDate = new com.toedter.calendar.JDateChooser();
 
+        setBackground(new java.awt.Color(161, 103, 165));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         createEmployeeLabel.setBackground(new java.awt.Color(153, 153, 153));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        createEmployeeLabel.setForeground(new java.awt.Color(153, 153, 153));
+        createEmployeeLabel.setForeground(new java.awt.Color(0, 0, 204));
         createEmployeeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         createEmployeeLabel.setText("View Employee");
         createEmployeeLabel.setToolTipText("To create new employee");
@@ -126,7 +127,7 @@ public class ViewJPanel extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 45, 860, 98));
 
-        btnDelete.setBackground(new java.awt.Color(255, 0, 0));
+        btnDelete.setBackground(new java.awt.Color(255, 51, 51));
         btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
@@ -136,7 +137,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         });
         add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(716, 149, -1, -1));
 
-        btnRead.setBackground(new java.awt.Color(0, 51, 255));
+        btnRead.setBackground(new java.awt.Color(0, 102, 255));
         btnRead.setForeground(new java.awt.Color(255, 255, 255));
         btnRead.setText("Read");
         btnRead.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +147,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         });
         add(btnRead, new org.netbeans.lib.awtextra.AbsoluteConstraints(794, 149, -1, -1));
 
+        btnUpdate.setBackground(new java.awt.Color(255, 204, 204));
         btnUpdate.setText("Update");
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -168,6 +170,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         drpGender.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Male", "Female", "Others" }));
         add(drpGender, new org.netbeans.lib.awtextra.AbsoluteConstraints(141, 248, -1, -1));
 
+        btnPhoto.setBackground(new java.awt.Color(255, 204, 204));
         btnPhoto.setText("Upload Photo");
         btnPhoto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -329,7 +332,19 @@ public class ViewJPanel extends javax.swing.JPanel {
      ep.setTeamInfo(teamInfo);
      ep.setAge(age);
      employeeProfileHistory.updateEmployee(ep,selectedRow);
-     
+     txtName.setText("");
+     txtEmployeeId.setText("");
+     txtAge.setValue(18);
+     drpGender.setSelectedItem("Male");
+     txtStartDate.setDate(null);
+     txtLevel.setText("");
+     txtTeamInfo.setText("");
+     drpPositionTitle.setSelectedItem("Intern");
+     txtEmployeeId.setText("");
+     txtEmailAddress.setText("");
+     txtCellPhoneNumber.setText("");
+     photo.setIcon(null);
+     JOptionPane.showMessageDialog(this, "Row Updated");
      populateTable();
         
     }//GEN-LAST:event_btnUpdateActionPerformed

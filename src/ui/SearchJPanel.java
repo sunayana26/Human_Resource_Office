@@ -107,7 +107,7 @@ public class SearchJPanel extends javax.swing.JPanel {
 
         jLabel4.setText("Select a field :");
 
-        drpFields.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Name", "Employee ID", "Age", "Gender", "Start Date", "Level", "Team Info", "Position Title", "CellPhone Number", "Email Address" }));
+        drpFields.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Name", "Employee ID", "Age", "Gender", "Level", "Team Info", "Position Title", "CellPhone Number", "Email Address" }));
 
         btnReset.setText("Reset");
         btnReset.addActionListener(new java.awt.event.ActionListener() {

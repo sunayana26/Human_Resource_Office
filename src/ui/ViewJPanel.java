@@ -86,7 +86,7 @@ public class ViewJPanel extends javax.swing.JPanel {
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         createEmployeeLabel.setForeground(new java.awt.Color(153, 153, 153));
         createEmployeeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        createEmployeeLabel.setText("Edit Employee");
+        createEmployeeLabel.setText("View Employee");
         createEmployeeLabel.setToolTipText("To create new employee");
         add(createEmployeeLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 872, 39));
 
@@ -284,8 +284,8 @@ public class ViewJPanel extends javax.swing.JPanel {
      EmployeeProfile ep = employeeProfileHistory.getHistory().get(selectedRow);
      
      txtAge.setValue(ep.getAge());
-    txtCellPhoneNumber.setText(String.valueOf(ep.getContact().getCellPhoneNumber()));
-    txtEmailAddress.setText(String.valueOf(ep.getContact().getEmailAddress()));
+    txtCellPhoneNumber.setText(String.valueOf(ep.getCellPhoneNumber()));
+    txtEmailAddress.setText(String.valueOf(ep.getEmailAddress()));
     txtEmployeeId.setText(String.valueOf(ep.getEmployeeId()));
      drpGender.setSelectedItem(String.valueOf(ep.getGender()));
     txtLevel.setText(String.valueOf(ep.getLevel()));

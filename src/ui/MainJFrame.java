@@ -41,8 +41,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(153, 153, 255));
+        jPanel2.setBackground(new java.awt.Color(161, 103, 165));
 
+        btnView.setBackground(new java.awt.Color(255, 204, 204));
         btnView.setText("View Employee");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -50,6 +51,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnCreate.setBackground(new java.awt.Color(255, 204, 204));
         btnCreate.setText("Create Employee");
         btnCreate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -57,6 +59,7 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        btnSearch.setBackground(new java.awt.Color(255, 204, 204));
         btnSearch.setText("Search Employee");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +99,8 @@ public class MainJFrame extends javax.swing.JFrame {
         );
 
         splitPanel.setLeftComponent(jPanel2);
+
+        jPanel1.setBackground(new java.awt.Color(232, 215, 241));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);

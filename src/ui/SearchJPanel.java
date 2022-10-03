@@ -54,7 +54,7 @@ public class SearchJPanel extends javax.swing.JPanel {
         createEmployeeLabel.setText("Search Employee");
         createEmployeeLabel.setToolTipText("To create new employee");
 
-        tblEmployeeHistory.setBackground(new java.awt.Color(161, 103, 165));
+        tblEmployeeHistory.setBackground(new java.awt.Color(232, 215, 241));
         tblEmployeeHistory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null, null, null, null, null},

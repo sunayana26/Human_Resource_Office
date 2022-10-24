@@ -8,6 +8,53 @@ package model;
  *
  * @author sunayanashivanagi
  */
-class VitalSigns {
+
+  public class VitalSigns {
+    
+    private int heartRate;
+    private int weight;
+    private int height;
+
+    public int getHeartRate() {
+        return heartRate;
+    }
+
+    public void setHeartRate(int heartRate) {
+        this.heartRate = heartRate;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public VitalSigns(int heartRate, int weight, int height) {
+        this.heartRate = heartRate;
+        this.weight = weight;
+        this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "VitalSigns{" + "heartRate=" + heartRate + ", weight=" + weight + ", height=" + height + '}';
+    }
+    
+    
+    
+    
+    
+    
+    
     
 }

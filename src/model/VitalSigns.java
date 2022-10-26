@@ -8,7 +8,6 @@ package model;
  *
  * @author sunayanashivanagi
  */
-
   public class VitalSigns {
     
     private int heartRate;

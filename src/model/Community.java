@@ -8,6 +8,30 @@ package model;
  *
  * @author sunayanashivanagi
  */
-public class Community {
+
+  public class Community extends City {
+    
+    private String communityName;
+
+    public String getCommunityName() {
+        return communityName;
+    }
+
+    public void setCommunityName(String communityName) {
+        this.communityName = communityName;
+    }
+
+    public Community(String communityName,String cityName) {
+        super(cityName);
+        this.communityName = communityName;
+    }
+
+    @Override
+    public String toString() {
+        return "Community{" + "communityName=" + communityName + '}';
+    }
+    
+    
+    
     
 }

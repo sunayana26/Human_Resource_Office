@@ -6,10 +6,9 @@ package model;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-
-   public class Admin extends Person {
+public class Admin extends Person {
     
     private String role;
 
@@ -28,8 +27,6 @@ package model;
 
     public Admin() {
     }
-    
-    
     
     
     

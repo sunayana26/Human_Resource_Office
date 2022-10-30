@@ -6,9 +6,9 @@ package model;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-    public class Hospital extends Community {
+public class Hospital extends Community {
     
     private String hospitalName;
 
@@ -24,13 +24,6 @@ package model;
         super(communityName, cityName);
         this.hospitalName = hospitalName;
     }
-    
-    
-    
-    
-    
-    
-    
     
     
 }

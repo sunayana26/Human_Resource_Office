@@ -331,6 +331,18 @@ public class MainJFrame extends javax.swing.JFrame {
             PatientJPanel patientJPanel = new PatientJPanel(patientDirectory, doctorDirectory, communityDirectory,encounterDirectory,username);
             splitPane.setRightComponent(patientJPanel);
         }
+        
+        else if(role.equals("Doctor") && doctorDirectory.login(username, password)){
+                btnLogout.setVisible(true);
+            JOptionPane.showMessageDialog(this,"Logged in as "+username);
+             String text = "<html>";
+            text+= "Welcome,<br>";
+            text+=username;
+            text+="</html>";
+            lblWelcomeText.setText(text);
+            DoctorJPanel doctorJPanel = new DoctorJPanel(patientDirectory, doctorDirectory, communityDirectory,encounterDirectory,username);
+            splitPane.setRightComponent(doctorJPanel);
+        }
         else{
             JOptionPane.showMessageDialog(this,"Invalid Credentials, Try again :(");
         }

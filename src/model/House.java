@@ -8,7 +8,7 @@ package model;
  *
  * @author sunayanashivanagi
  */
-    public class House extends Community {
+public class House extends Community {
     
     private String streetName;
     private int houseNumber;
@@ -34,4 +34,9 @@ package model;
         this.streetName = streetName;
         this.houseNumber = houseNumber;
     }
+
+   
+    
+    
+    
 }

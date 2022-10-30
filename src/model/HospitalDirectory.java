@@ -10,7 +10,7 @@ import java.util.ArrayList;
  *
  * @author sunayanashivanagi
  */
-    public class HospitalDirectory {
+public class HospitalDirectory {
     private ArrayList<Hospital> history;
 
     public HospitalDirectory() {
@@ -46,5 +46,4 @@ import java.util.ArrayList;
     public String toString() {
         return "EmployeeProfileHistory{" + "history=" + history + '}';
     }
-    
 }

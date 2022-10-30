@@ -6,10 +6,9 @@ package model;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-   
-   public class City {
+public class City {
     
     private String cityName;
 
@@ -28,7 +27,7 @@ package model;
     @Override
     public String toString() {
         return "City{" + "cityName=" + cityName + '}';
-    } 
+    }
     
     
     

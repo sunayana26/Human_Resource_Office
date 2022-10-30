@@ -6,10 +6,9 @@ package model;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-
-  public class Community extends City {
+public class Community extends City {
     
     private String communityName;
 
@@ -30,7 +29,6 @@ package model;
     public String toString() {
         return "Community{" + "communityName=" + communityName + '}';
     }
-    
     
     
     

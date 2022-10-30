@@ -9,7 +9,6 @@ package model;
  * @author sunayanashivanagi
  */
 public class Person {
-
     private String name;
     private int age;
     private String gender;
@@ -17,6 +16,24 @@ public class Person {
     private long phoneNumber;
     private String userName;
     private String password;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+    
+    
 
     public String getName() {
         return name;
@@ -58,22 +75,6 @@ public class Person {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public Person(String name, int age, String gender, String emailId, long phoneNumber, String userName, String password) {
         this.name = name;
         this.age = age;
@@ -86,5 +87,12 @@ public class Person {
 
     public Person() {
     }
+
+    @Override
+    public String toString() {
+        return "Person{" + "name=" + name + ", age=" + age + ", gender=" + gender + ", emailId=" + emailId + ", phoneNumber=" + phoneNumber + ", userName=" + userName + ", password=" + password + '}';
+    }
+    
+    
     
 }

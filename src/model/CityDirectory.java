@@ -8,10 +8,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-
-  public class CityDirectory {
+public class CityDirectory {
     
     private ArrayList<City> history;
 
@@ -47,5 +46,6 @@ import java.util.ArrayList;
     @Override
     public String toString() {
         return "EmployeeProfileHistory{" + "history=" + history + '}';
-    }  
+    }
+    
 }

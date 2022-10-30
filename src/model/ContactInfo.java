@@ -6,12 +6,15 @@ package model;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
 public class ContactInfo {
- 
-    private long cellPhoneNumber;                  
+    private long cellPhoneNumber;
     private String emailAddress;
+    
+    public void ContactInfo() {
+        
+    }
 
     public long getCellPhoneNumber() {
         return cellPhoneNumber;
@@ -28,7 +31,11 @@ public class ContactInfo {
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
-    
+
+    @Override
+    public String toString() {
+        return "ContactInfo{" + "cellPhoneNumber=" + cellPhoneNumber + ", emailAddress=" + emailAddress + '}';
+    }
     
     
 }

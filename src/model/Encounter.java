@@ -8,13 +8,37 @@ import java.util.Date;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-  public class Encounter {
+public class Encounter {
 
     private Date date;
 
     private VitalSigns vitalSigns;
+    
+    private Patient patient;
+    
+    private Doctor doctor;
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
+    
+    
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
+    
+    
 
     public Date getDate() {
         return date;
@@ -32,18 +56,22 @@ import java.util.Date;
         this.vitalSigns = vitalSigns;
     }
 
-    public Encounter(Date date, VitalSigns vitalSigns) {
+    public Encounter(Date date, VitalSigns vitalSigns, Patient patient, Doctor doctor) {
         this.date = date;
-
         this.vitalSigns = vitalSigns;
+        this.patient = patient;
+        this.doctor = doctor;
     }
 
     @Override
     public String toString() {
-        return "Encounter{" + "date=" + date + ",  vitalSigns=" + vitalSigns + '}';
-    }  
+        return "Encounter{" + "date=" + date + ", vitalSigns=" + vitalSigns + ", patient=" + patient + ", doctor=" + doctor + '}';
+    }
+
     
+
     
+
     
-    
+
 }

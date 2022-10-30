@@ -8,10 +8,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-
-   public class DoctorDirectory {
+public class DoctorDirectory {
     private ArrayList<Doctor> history;
 
     public DoctorDirectory() {
@@ -54,5 +53,16 @@ import java.util.ArrayList;
                 return true;
         }
         return flag;
-    } 
+    }
+    
+    public Doctor search(String username){
+        Doctor result = new Doctor() ;
+        for(Doctor p:getHistory()){
+            if(p.getUserName().equals(username)){
+                result=p;
+                break;
+            }
+        }
+        return result;
+    }
 }

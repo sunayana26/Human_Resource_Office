@@ -6,10 +6,9 @@ package model;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-
-  public class Doctor extends Person {
+public class Doctor extends Person {
     
     private String specialization;
     private Community community;
@@ -49,6 +48,6 @@ package model;
     
     public Doctor(){
     }
-
+    
     
 }

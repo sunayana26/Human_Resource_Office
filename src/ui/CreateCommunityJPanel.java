@@ -12,7 +12,7 @@ import model.CommunityDirectory;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
 public class CreateCommunityJPanel extends javax.swing.JPanel {
 

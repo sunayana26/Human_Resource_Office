@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
-    public class CommunityDirectory {
+public class CommunityDirectory {
     
     private ArrayList<Community> history;
 
@@ -47,4 +47,5 @@ import java.util.ArrayList;
     public String toString() {
         return "EmployeeProfileHistory{" + "history=" + history + '}';
     }
+    
 }

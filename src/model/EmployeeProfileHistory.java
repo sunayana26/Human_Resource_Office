@@ -5,11 +5,10 @@
 package model;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
 public class EmployeeProfileHistory {
     
@@ -17,6 +16,7 @@ public class EmployeeProfileHistory {
 
     public EmployeeProfileHistory() {
         this.history = new ArrayList<EmployeeProfile>();
+        
     }   
 
     public ArrayList<EmployeeProfile> getHistory() {

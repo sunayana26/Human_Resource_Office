@@ -11,7 +11,7 @@ import model.CityDirectory;
 
 /**
  *
- * @author sunayanashivanagi
+ * @author vigy
  */
 public class CreateCityJPanel extends javax.swing.JPanel {
 

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author vigy
+ * @author sunayanashivanagi
  */
 public class EncounterDirectory {
      private ArrayList<Encounter> history;

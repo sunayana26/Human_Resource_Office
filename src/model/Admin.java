@@ -6,7 +6,7 @@ package model;
 
 /**
  *
- * @author vigy
+ * @author sunayanashivanagi
  */
 public class Admin extends Person {
     

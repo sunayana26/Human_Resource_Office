@@ -10,7 +10,7 @@ import model.HospitalDirectory;
 
 /**
  *
- * @author vigy
+ * @author sunayanashivanagi
  */
 public class CreateHospitalJPanel extends javax.swing.JPanel {
 

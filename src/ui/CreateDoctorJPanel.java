@@ -12,7 +12,7 @@ import model.DoctorDirectory;
 
 /**
  *
- * @author vigy
+ * @author sunayanashivanagi
  */
 public class CreateDoctorJPanel extends javax.swing.JPanel {
 

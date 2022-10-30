@@ -8,7 +8,7 @@ import java.util.Date;
 
 /**
  *
- * @author vigy
+ * @author sunayanashivanagi
  */
 public class Encounter {
 

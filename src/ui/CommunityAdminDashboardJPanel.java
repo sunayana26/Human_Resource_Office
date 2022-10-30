@@ -8,7 +8,10 @@ import model.CityDirectory;
 import model.CommunityDirectory;
 import model.HouseDirectory;
 
-
+/**
+ *
+ * @author sunayanashivanagi
+ */
 public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
 
     /**

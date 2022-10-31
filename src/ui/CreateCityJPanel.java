@@ -349,7 +349,8 @@ public class CreateCityJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this, "New City Details was created ! ");
         populateTable();
         txtCityName.setText("");
-
+        txtStateName.setText("");
+        txtCountry.setText("");
         //    }
     }//GEN-LAST:event_saveActionPerformed
 

@@ -75,6 +75,8 @@ public class CreateEncounterJPanel extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         createEmployeeLabel = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(202, 233, 159));
+
         jLabel2.setText("Select a Patient :");
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
@@ -159,16 +161,13 @@ public class CreateEncounterJPanel extends javax.swing.JPanel {
                                 .addGap(91, 91, 91)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addGap(22, 22, 22)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(lblHeartRate1)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(lblHeartRate2)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(lblHeartRate1)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(lblHeartRate2)
+                                        .addGap(18, 18, 18)
+                                        .addComponent(txtWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(lblHeartRate)
                                         .addGap(18, 18, 18)

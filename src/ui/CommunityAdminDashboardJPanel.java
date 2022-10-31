@@ -59,6 +59,7 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Community Admin Dashboard");
 
+        jTabbedPane1.setBackground(new java.awt.Color(204, 204, 255));
         jTabbedPane1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
 
         btnCreateCity.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N

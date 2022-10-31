@@ -84,6 +84,8 @@ public class ViewEncounterJPanel extends javax.swing.JPanel {
         drpPatientName = new javax.swing.JComboBox<>();
         btnDelete = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(202, 233, 159));
+
         tblEncountersPatient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},

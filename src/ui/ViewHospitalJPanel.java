@@ -61,6 +61,8 @@ public class ViewHospitalJPanel extends javax.swing.JPanel {
         employeeId2 = new javax.swing.JLabel();
         txtSpecialization = new javax.swing.JTextField();
 
+        jPanel1.setBackground(new java.awt.Color(202, 233, 159));
+
         createEmployeeLabel.setBackground(new java.awt.Color(0, 71, 119));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         createEmployeeLabel.setForeground(new java.awt.Color(0, 71, 119));

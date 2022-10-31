@@ -117,6 +117,8 @@ public class DoctorJPanel extends javax.swing.JPanel {
         createEncounterTab.setForeground(new java.awt.Color(255, 255, 255));
         createEncounterTab.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
 
+        tabCreateEncounter.setBackground(new java.awt.Color(202, 233, 159));
+
         jLabel2.setText("Select a Patient :");
 
         jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
@@ -264,6 +266,8 @@ public class DoctorJPanel extends javax.swing.JPanel {
         );
 
         createEncounterTab.addTab("Create Encounter", tabCreateEncounter);
+
+        tabViewEditEncounter.setBackground(new java.awt.Color(202, 233, 159));
 
         tblEncountersPatient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

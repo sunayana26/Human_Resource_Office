@@ -65,7 +65,7 @@ public class CreateHospitalJPanel extends javax.swing.JPanel {
         employeeId3 = new javax.swing.JLabel();
         txtSpeciality = new javax.swing.JTextField();
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(202, 233, 159));
 
         employeeId.setText("Community Name:");
 

@@ -72,6 +72,8 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         drpHouse = new javax.swing.JComboBox<>();
 
+        setBackground(new java.awt.Color(202, 233, 159));
+
         createEmployeeLabel.setBackground(new java.awt.Color(0, 71, 119));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         createEmployeeLabel.setForeground(new java.awt.Color(0, 71, 119));
@@ -195,7 +197,7 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setText("jLabel1");
+        jLabel1.setText("House");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

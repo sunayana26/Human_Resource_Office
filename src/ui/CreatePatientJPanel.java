@@ -65,12 +65,11 @@ public class CreatePatientJPanel extends javax.swing.JPanel {
         drpHouse = new javax.swing.JComboBox<>();
         txtPassword = new javax.swing.JPasswordField();
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(202, 233, 159));
 
         employeeId.setText("Username:");
 
-        save.setBackground(new java.awt.Color(255, 119, 0));
-        save.setForeground(new java.awt.Color(255, 255, 255));
+        save.setBackground(new java.awt.Color(255, 153, 0));
         save.setText("Register");
         save.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

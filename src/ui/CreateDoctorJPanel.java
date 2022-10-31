@@ -67,7 +67,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         drpCityName = new javax.swing.JComboBox<>();
         txtPassword = new javax.swing.JPasswordField();
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(202, 233, 159));
 
         employeeId.setText("Username:");
 

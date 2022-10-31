@@ -78,6 +78,8 @@ public class HospitalAdminDashboardJPanel extends javax.swing.JPanel {
         btnCreateEncounter = new javax.swing.JButton();
         splitWorkspace3 = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(202, 233, 159));
+
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Hospital Admin Dashboard");
@@ -122,7 +124,7 @@ public class HospitalAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitPanePatient.setLeftComponent(splitNavigation);
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(202, 233, 159));
 
         javax.swing.GroupLayout splitWorkspaceLayout = new javax.swing.GroupLayout(splitWorkspace);
         splitWorkspace.setLayout(splitWorkspaceLayout);

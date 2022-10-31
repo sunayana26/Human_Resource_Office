@@ -76,10 +76,14 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
         btnCreateEncounter = new javax.swing.JButton();
         splitWorkspace3 = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(202, 233, 159));
+
+        jLabel1.setBackground(new java.awt.Color(202, 233, 159));
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("System Admin Dashboard");
 
+        jTabbedPane1.setBackground(new java.awt.Color(202, 233, 159));
         jTabbedPane1.setFont(new java.awt.Font("Helvetica Neue", 0, 24)); // NOI18N
 
         btnViewPatient.setFont(new java.awt.Font("Helvetica Neue", 1, 10)); // NOI18N
@@ -120,7 +124,7 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitPanePatient.setLeftComponent(splitNavigation);
 
-        splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace.setBackground(new java.awt.Color(202, 233, 159));
 
         javax.swing.GroupLayout splitWorkspaceLayout = new javax.swing.GroupLayout(splitWorkspace);
         splitWorkspace.setLayout(splitWorkspaceLayout);
@@ -192,7 +196,7 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitPaneDoctor.setLeftComponent(splitNavigation1);
 
-        splitWorkspace1.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace1.setBackground(new java.awt.Color(202, 233, 159));
 
         javax.swing.GroupLayout splitWorkspace1Layout = new javax.swing.GroupLayout(splitWorkspace1);
         splitWorkspace1.setLayout(splitWorkspace1Layout);
@@ -264,7 +268,7 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitPaneHospital.setLeftComponent(splitNavigation2);
 
-        splitWorkspace2.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace2.setBackground(new java.awt.Color(202, 233, 159));
 
         javax.swing.GroupLayout splitWorkspace2Layout = new javax.swing.GroupLayout(splitWorkspace2);
         splitWorkspace2.setLayout(splitWorkspace2Layout);
@@ -336,7 +340,7 @@ public class SystemAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitPaneEncounter.setLeftComponent(splitNavigation3);
 
-        splitWorkspace3.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace3.setBackground(new java.awt.Color(202, 233, 159));
 
         javax.swing.GroupLayout splitWorkspace3Layout = new javax.swing.GroupLayout(splitWorkspace3);
         splitWorkspace3.setLayout(splitWorkspace3Layout);

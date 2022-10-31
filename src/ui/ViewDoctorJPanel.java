@@ -71,6 +71,8 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
         drpCommunityName = new javax.swing.JComboBox<>();
         cellPhoneNumber1 = new javax.swing.JLabel();
 
+        jPanel1.setBackground(new java.awt.Color(202, 233, 159));
+
         createEmployeeLabel.setBackground(new java.awt.Color(0, 71, 119));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         createEmployeeLabel.setForeground(new java.awt.Color(0, 71, 119));

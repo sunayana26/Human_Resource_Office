@@ -13,8 +13,6 @@ public class VitalSigns {
     private int heartRate;
     private int weight;
     private int height;
-    
-    
 
     public int getHeartRate() {
         return heartRate;

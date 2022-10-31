@@ -43,6 +43,18 @@ public class HouseDirectory {
     public void deleteAll(){
     history.removeAll(history);
     }
+    
+    public House search(String streetName){
+        House result = new House();
+        for(House h : getHistory()){
+            if(h.getStreetName().equals(streetName)){
+                result=h;
+                break;
+            }
+        }
+        return result;
+    }
+    
     @Override
     public String toString() {
         return "EmployeeProfileHistory{" + "history=" + history + '}';

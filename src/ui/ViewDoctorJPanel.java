@@ -32,7 +32,7 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
         populateTable();
         for(Community c:communityDirectory.getHistory()){
              drpCommunityName.addItem(String.valueOf(c.getCommunityName()));
-             drpCityName.addItem(String.valueOf(c.getCityName()));
+             
          }
     }
 
@@ -70,8 +70,6 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
         txtSpecialization = new javax.swing.JTextField();
         drpCommunityName = new javax.swing.JComboBox<>();
         cellPhoneNumber1 = new javax.swing.JLabel();
-        cellPhoneNumber2 = new javax.swing.JLabel();
-        drpCityName = new javax.swing.JComboBox<>();
 
         createEmployeeLabel.setBackground(new java.awt.Color(0, 71, 119));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
@@ -198,35 +196,10 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
 
         cellPhoneNumber1.setText("Community Name:");
 
-        cellPhoneNumber2.setText("City Name:");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(createEmployeeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 872, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(btnDelete)
-                                    .addGap(6, 6, 6)
-                                    .addComponent(btnRead))
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(317, 317, 317)
-                        .addComponent(age)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(296, 296, 296)
-                        .addComponent(gender)
-                        .addGap(18, 18, 18)
-                        .addComponent(drpGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
@@ -234,10 +207,6 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
                         .addComponent(cellPhoneNumber1)
                         .addGap(18, 18, 18)
                         .addComponent(drpCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(cellPhoneNumber2)
-                        .addGap(18, 18, 18)
-                        .addComponent(drpCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(emailAddress1)
                         .addGap(18, 18, 18)
@@ -263,11 +232,32 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(273, 273, 273))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(427, 799, Short.MAX_VALUE)
-                    .addComponent(btnUpdate)
-                    .addGap(0, 12, Short.MAX_VALUE)))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(createEmployeeLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 872, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(btnDelete)
+                                    .addGap(6, 6, 6)
+                                    .addComponent(btnRead))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(317, 317, 317)
+                        .addComponent(age)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtAge, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(296, 296, 296)
+                        .addComponent(gender)
+                        .addGap(18, 18, 18)
+                        .addComponent(drpGender, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(401, 401, 401)
+                        .addComponent(btnUpdate)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,16 +306,9 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cellPhoneNumber1)
                     .addComponent(drpCommunityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(cellPhoneNumber2)
-                    .addComponent(drpCityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(73, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addGap(0, 564, Short.MAX_VALUE)
-                    .addComponent(btnUpdate)
-                    .addGap(0, 40, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addComponent(btnUpdate)
+                .addContainerGap(61, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -381,7 +364,7 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
         txtUsername.setText(String.valueOf(p.getUserName()));
         txtSpecialization.setText(p.getSpecialization());
         txtPassword.setText(p.getPassword());
-        drpCityName.setSelectedItem(String.valueOf(p.getCommunity().getCityName()));
+        
         drpCommunityName.setSelectedItem(String.valueOf(p.getCommunity().getCommunityName()));
     }//GEN-LAST:event_btnReadActionPerformed
 
@@ -405,8 +388,8 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
         String password = txtPassword.getText();
         String specialization = txtSpecialization.getText();
         String communityName = String.valueOf(drpCommunityName.getSelectedItem());
-            String cityName = String.valueOf(drpCityName.getSelectedItem());
-            Community c= new Community(communityName, cityName);
+            
+            Community c= communityDirectory.search(communityName);
 
         Doctor temp = new Doctor(specialization,c, name, age, gender, emailAddress, cellPhoneNumber, username, password);
 
@@ -427,7 +410,7 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
         txtPassword.setText("");
         txtSpecialization.setText("");
         drpCommunityName.setSelectedIndex(0);
-        drpCityName.setSelectedIndex(0);
+        
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
@@ -480,9 +463,7 @@ public class ViewDoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnUpdate;
     private javax.swing.JLabel cellPhoneNumber;
     private javax.swing.JLabel cellPhoneNumber1;
-    private javax.swing.JLabel cellPhoneNumber2;
     private javax.swing.JLabel createEmployeeLabel;
-    private javax.swing.JComboBox<String> drpCityName;
     private javax.swing.JComboBox<String> drpCommunityName;
     private javax.swing.JComboBox<String> drpGender;
     private javax.swing.JLabel emailAddress;

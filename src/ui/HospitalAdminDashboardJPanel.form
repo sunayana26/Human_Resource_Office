@@ -421,7 +421,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="splitPaneDoctor2" max="32767" attributes="0"/>
+                      <Component id="splitPaneEncounter" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -430,14 +430,14 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="splitPaneDoctor2" max="32767" attributes="0"/>
+                      <Component id="splitPaneEncounter" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Container class="javax.swing.JSplitPane" name="splitPaneDoctor2">
+            <Container class="javax.swing.JSplitPane" name="splitPaneEncounter">
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JSplitPaneSupportLayout"/>
               <SubComponents>
@@ -454,8 +454,8 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace max="32767" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="btnCreateDoctor2" alignment="0" pref="131" max="32767" attributes="0"/>
-                                  <Component id="btnViewDoctor2" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="btnCreateEncounter" alignment="0" pref="131" max="32767" attributes="0"/>
+                                  <Component id="btnViewEncounter" alignment="0" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
@@ -464,35 +464,35 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
-                              <Component id="btnCreateDoctor2" min="-2" pref="105" max="-2" attributes="0"/>
+                              <Component id="btnCreateEncounter" min="-2" pref="105" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                              <Component id="btnViewDoctor2" min="-2" pref="105" max="-2" attributes="0"/>
+                              <Component id="btnViewEncounter" min="-2" pref="105" max="-2" attributes="0"/>
                               <EmptySpace pref="128" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
                   </Layout>
                   <SubComponents>
-                    <Component class="javax.swing.JButton" name="btnViewDoctor2">
+                    <Component class="javax.swing.JButton" name="btnViewEncounter">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Helvetica Neue" size="10" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="View Doctor"/>
+                        <Property name="text" type="java.lang.String" value="View Encounter"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewDoctor2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnViewEncounterActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnCreateDoctor2">
+                    <Component class="javax.swing.JButton" name="btnCreateEncounter">
                       <Properties>
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Helvetica Neue" size="10" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Create Doctor"/>
+                        <Property name="text" type="java.lang.String" value="Create Encounter"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateDoctor2ActionPerformed"/>
+                        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCreateEncounterActionPerformed"/>
                       </Events>
                     </Component>
                   </SubComponents>

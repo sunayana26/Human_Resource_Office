@@ -43,6 +43,16 @@ public class CityDirectory {
     public void deleteAll(){
     history.removeAll(history);
     }
+    
+    public City search(String cityName){
+        City city =new City() ;
+        for(City c:getHistory()){
+            if(c.getCityName().equals((cityName))){
+                city = c;
+            }
+        }
+        return city;
+    }
     @Override
     public String toString() {
         return "EmployeeProfileHistory{" + "history=" + history + '}';

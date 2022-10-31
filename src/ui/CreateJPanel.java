@@ -68,7 +68,7 @@ public class CreateJPanel extends javax.swing.JPanel {
         save = new javax.swing.JButton();
         reset = new javax.swing.JButton();
         txtEmployeeId = new javax.swing.JTextField();
-        txtStartDate = new org.netbeans.modules.form.InvalidComponent();
+        txtStartDate = new com.toedter.calendar.JDateChooser();
         drpPositionTitle = new javax.swing.JComboBox<>();
         txtAge = new javax.swing.JSpinner();
         drpGender = new javax.swing.JComboBox<>();
@@ -598,7 +598,7 @@ public class CreateJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtEmployeeId;
     private javax.swing.JTextField txtLevel;
     private javax.swing.JTextField txtName;
-    private org.netbeans.modules.form.InvalidComponent txtStartDate;
+    private com.toedter.calendar.JDateChooser txtStartDate;
     private javax.swing.JTextField txtTeamInfo;
     private javax.swing.JLabel valCellPhoneNumber;
     private javax.swing.JLabel valDate;

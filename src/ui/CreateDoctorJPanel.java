@@ -58,7 +58,6 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         drpGender = new javax.swing.JComboBox<>();
         age = new javax.swing.JLabel();
         cellPhoneNumber = new javax.swing.JLabel();
-        txtPassword = new javax.swing.JTextField();
         employeeId1 = new javax.swing.JLabel();
         txtSpecialization = new javax.swing.JTextField();
         emailAddress1 = new javax.swing.JLabel();
@@ -66,6 +65,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         cellPhoneNumber2 = new javax.swing.JLabel();
         drpCommunityName = new javax.swing.JComboBox<>();
         drpCityName = new javax.swing.JComboBox<>();
+        txtPassword = new javax.swing.JPasswordField();
 
         splitWorkspace.setBackground(new java.awt.Color(204, 204, 255));
 
@@ -131,12 +131,6 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         age.setText("Age:");
 
         cellPhoneNumber.setText("Cell Phone Number:");
-
-        txtPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtPasswordActionPerformed(evt);
-            }
-        });
 
         employeeId1.setText("Password:");
 
@@ -314,7 +308,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
             String specialization = txtSpecialization.getText();
             String communityName = String.valueOf(drpCommunityName.getSelectedItem());
             String cityName = String.valueOf(drpCityName.getSelectedItem());
-            Community c= new Community(communityName, cityName);
+            Community c= communityDirectory.search(communityName);
 
             Doctor d = new Doctor(specialization,c, name, age, gender, emailAddress, cellPhoneNumber, username, password);
 
@@ -373,10 +367,6 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCellPhoneNumberActionPerformed
 
-    private void txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPasswordActionPerformed
-
     private void txtSpecializationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtSpecializationActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSpecializationActionPerformed
@@ -404,7 +394,7 @@ public class CreateDoctorJPanel extends javax.swing.JPanel {
     private javax.swing.JTextField txtCellPhoneNumber;
     private javax.swing.JTextField txtEmailAddress;
     private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtPassword;
+    private javax.swing.JPasswordField txtPassword;
     private javax.swing.JTextField txtSpecialization;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables

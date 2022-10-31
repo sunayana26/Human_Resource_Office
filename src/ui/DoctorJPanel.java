@@ -78,6 +78,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
         drpPatientName = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        txtDate = new com.toedter.calendar.JDateChooser();
         btnBook = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -91,7 +92,6 @@ public class DoctorJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        txtDate = new com.toedter.calendar.JDateChooser();
         tabViewEditEncounter = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEncountersPatient = new javax.swing.JTable();
@@ -105,9 +105,9 @@ public class DoctorJPanel extends javax.swing.JPanel {
         txtUpdateWeight = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
+        txtUpdateDate = new com.toedter.calendar.JDateChooser();
         btnEdit = new javax.swing.JButton();
         Update = new javax.swing.JButton();
-        txtUpdateDate = new com.toedter.calendar.JDateChooser();
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 36)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -173,8 +173,8 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel8)
                 .addGap(64, 64, 64)
                 .addComponent(jLabel7)
-                .addGap(18, 18, 18)
-                .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addComponent(jLabel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(tabCreateEncounterLayout.createSequentialGroup()
@@ -233,9 +233,9 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 .addComponent(jLabel6)
                 .addGap(18, 18, 18)
                 .addGroup(tabCreateEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel8)
-                    .addComponent(txtDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel8))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel9)
                 .addGroup(tabCreateEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -267,26 +267,26 @@ public class DoctorJPanel extends javax.swing.JPanel {
 
         tblEncountersPatient.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Doctor Name", "Date", "Community Name", "City Name", "Specilization", "Disease"
+                "Doctor Name", "Date", "Specilization", "Disease", "Heart Rate", "Weight", "Height"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -336,38 +336,38 @@ public class DoctorJPanel extends javax.swing.JPanel {
         tabViewEditEncounterLayout.setHorizontalGroup(
             tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
-                .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
-                                .addComponent(lblHeartRate4)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtUpdateHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
-                                .addComponent(lblHeartRate3)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtUpdateHearRate, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
-                                .addComponent(lblHeartRate5)
-                                .addGap(18, 18, 18)
-                                .addComponent(txtUpdateWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(Update, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel14)))
-                    .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
-                        .addGap(259, 259, 259)
-                        .addComponent(jLabel15)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(337, 337, 337)
-                        .addComponent(btnEdit)))
+                .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnEdit)
+                    .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
+                            .addGap(62, 62, 62)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
+                            .addGap(283, 283, 283)
+                            .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
+                                    .addComponent(lblHeartRate4)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtUpdateHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
+                                    .addComponent(lblHeartRate3)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtUpdateHearRate, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
+                                    .addComponent(lblHeartRate5)
+                                    .addGap(18, 18, 18)
+                                    .addComponent(txtUpdateWeight, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(Update, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel12)
+                                .addComponent(jLabel13)
+                                .addComponent(jLabel14)))
+                        .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
+                            .addGap(259, 259, 259)
+                            .addComponent(jLabel15)
+                            .addGap(26, 26, 26)
+                            .addComponent(txtUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(70, Short.MAX_VALUE))
         );
         tabViewEditEncounterLayout.setVerticalGroup(
@@ -376,12 +376,11 @@ public class DoctorJPanel extends javax.swing.JPanel {
                 .addGap(28, 28, 28)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(tabViewEditEncounterLayout.createSequentialGroup()
-                        .addComponent(btnEdit)
-                        .addGap(4, 4, 4)
-                        .addComponent(jLabel15))
-                    .addComponent(txtUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(btnEdit)
+                .addGap(3, 3, 3)
+                .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
+                    .addComponent(txtUpdateDate, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(tabViewEditEncounterLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblHeartRate3)
@@ -399,7 +398,7 @@ public class DoctorJPanel extends javax.swing.JPanel {
                     .addComponent(jLabel14))
                 .addGap(18, 18, 18)
                 .addComponent(Update)
-                .addContainerGap(170, Short.MAX_VALUE))
+                .addContainerGap(165, Short.MAX_VALUE))
         );
 
         createEncounterTab.addTab("View Encounters", tabViewEditEncounter);
@@ -519,10 +518,10 @@ public class DoctorJPanel extends javax.swing.JPanel {
             DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
             String strDate = dateFormat.format(e.getDate());
             row[1] = strDate;
-            row[2] = e.getDoctor().getCommunity().getCommunityName();
-            row[3] = e.getDoctor().getCommunity().getCityName();
-            row[4] = e.getDoctor().getSpecialization();
             row[5] = e.getPatient().getDisease();
+            row[4] = e.getVitalSigns().getHeartRate();
+            row[5] = e.getVitalSigns().getWeight();
+            row[6] = e.getVitalSigns().getHeight();
 
             model.addRow(row);
 

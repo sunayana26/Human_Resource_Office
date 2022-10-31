@@ -260,7 +260,7 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 //        CreateHospitalJPanel createHospitalJPanel= new CreateHospitalJPanel(hospitalDirectory);
 //        splitPaneHouse.setRightComponent(createHospitalJPanel);
-        CreateHouseJPanel createHouseJPanel = new CreateHouseJPanel(houseDirectory);
+        CreateHouseJPanel createHouseJPanel = new CreateHouseJPanel(houseDirectory,cityDirectory,communityDirectory);
         splitPaneHouse.setRightComponent(createHouseJPanel);
     }//GEN-LAST:event_btnCreateHouseActionPerformed
 
@@ -268,7 +268,7 @@ public class CommunityAdminDashboardJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
 //        CreateDoctorJPanel createDoctorJPanel= new CreateDoctorJPanel(doctorDirectory);
 //        splitPaneCommunity.setRightComponent(createDoctorJPanel);
-        CreateCommunityJPanel createCommunityJPanel = new CreateCommunityJPanel(communityDirectory);
+        CreateCommunityJPanel createCommunityJPanel = new CreateCommunityJPanel(communityDirectory,cityDirectory);
         splitPaneCommunity.setRightComponent(createCommunityJPanel);
     }//GEN-LAST:event_btnCreateCommunityActionPerformed
 

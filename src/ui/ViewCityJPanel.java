@@ -42,6 +42,10 @@ public class ViewCityJPanel extends javax.swing.JPanel {
         btnUpdate = new javax.swing.JButton();
         name = new javax.swing.JLabel();
         txtCityName = new javax.swing.JTextField();
+        name1 = new javax.swing.JLabel();
+        txtStateName = new javax.swing.JTextField();
+        txtCountryName = new javax.swing.JTextField();
+        name2 = new javax.swing.JLabel();
 
         createEmployeeLabel.setBackground(new java.awt.Color(0, 71, 119));
         createEmployeeLabel.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
@@ -52,26 +56,26 @@ public class ViewCityJPanel extends javax.swing.JPanel {
 
         tblEmployeeHistory.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null},
-                {null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "City Name"
+                "City Name", "State Name", "Country"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false
+                false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -109,15 +113,41 @@ public class ViewCityJPanel extends javax.swing.JPanel {
             }
         });
 
+        name1.setText("State Name:");
+
+        txtStateName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtStateNameActionPerformed(evt);
+            }
+        });
+
+        txtCountryName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCountryNameActionPerformed(evt);
+            }
+        });
+
+        name2.setText("Country Name:");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(name)
-                .addGap(18, 18, 18)
-                .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(name2)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCountryName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(name1)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtStateName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(name)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(273, 273, 273))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,7 +159,7 @@ public class ViewCityJPanel extends javax.swing.JPanel {
                                 .addComponent(btnRead)
                                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 860, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(397, 397, 397)
+                        .addGap(395, 395, 395)
                         .addComponent(btnUpdate)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -146,9 +176,17 @@ public class ViewCityJPanel extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(name)
                     .addComponent(txtCityName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(name1)
+                    .addComponent(txtStateName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(7, 7, 7)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(name2)
+                    .addComponent(txtCountryName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addComponent(btnUpdate)
-                .addContainerGap(331, Short.MAX_VALUE))
+                .addContainerGap(272, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -186,6 +224,8 @@ public class ViewCityJPanel extends javax.swing.JPanel {
                 
 
         txtCityName.setText(String.valueOf(c.getCityName()));
+        txtStateName.setText(String.valueOf(c.getStateName()));
+        txtCountryName.setText(String.valueOf(c.getCountry()));
         
     }//GEN-LAST:event_btnReadActionPerformed
 
@@ -200,9 +240,12 @@ public class ViewCityJPanel extends javax.swing.JPanel {
         City c= cityDirectory.getHistory().get(selectedRow);
        
         String cityName = txtCityName.getText();
+        String stateName = txtStateName.getText();
+        String countryName = txtCountryName.getText();
+        
 
        
-        City temp = new City(cityName);
+        City temp = new City(cityName, stateName, countryName);
         
         cityDirectory.update(temp, selectedRow);
 
@@ -218,6 +261,14 @@ public class ViewCityJPanel extends javax.swing.JPanel {
     private void txtCityNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtCityNameActionPerformed
+
+    private void txtStateNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtStateNameActionPerformed
+
+    private void txtCountryNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCountryNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtCountryNameActionPerformed
 
     private void populateTable() {
 
@@ -240,7 +291,11 @@ public class ViewCityJPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel name;
+    private javax.swing.JLabel name1;
+    private javax.swing.JLabel name2;
     private javax.swing.JTable tblEmployeeHistory;
     private javax.swing.JTextField txtCityName;
+    private javax.swing.JTextField txtCountryName;
+    private javax.swing.JTextField txtStateName;
     // End of variables declaration//GEN-END:variables
 }

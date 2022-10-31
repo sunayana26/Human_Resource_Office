@@ -14,6 +14,7 @@ import model.DoctorDirectory;
 import model.EmployeeProfileHistory;
 import model.EncounterDirectory;
 import model.HospitalDirectory;
+import model.House;
 import model.HouseDirectory;
 import model.Patient;
 import model.PatientDirectory;
@@ -58,13 +59,12 @@ public class MainJFrame extends javax.swing.JFrame {
         hospitalAdmin = new Admin("Hospital", "HospitalAdmin",  22,  "Male",  "asd@gmail.com",  123123,  "hosadmin",  "hosadmin");
         communityAdmin = new Admin("Community", "CommunityAdmin",  22,  "Male",  "asd@gmail.com",  123123,  "comadmin",  "comadmin");
         
-        patientDirectory.add(new Patient("Flu", "xyz", 22, "Male", "ass@gmai.com", 123123, "xyz", "xyz"));
+        patientDirectory.add(new Patient("Flu",new House(), "xyz", 22, "Male", "ass@gmai.com", 123123, "xyz", "xyz"));
+        doctorDirectory.add(new Doctor("Heart", new Community("Boylston",213,"asda", "Boston","asdas","asd"), "John", 22, "Male", "asdsa", 123123, "abc", "abc"));
         
-        doctorDirectory.add(new Doctor("Heart", new Community("Boylston", "Boston"), "John", 22, "Male", "asdsa", 123123, "abc", "abc"));
-        
-        communityDirectory.add(new Community("Boylston", "Boston"));
-        communityDirectory.add(new Community("xyz", "Bangalore"));
-        communityDirectory.add(new Community("abc", "Chennai"));
+        communityDirectory.add(new Community("Boylston",213,"asda", "Boston","asdas","asd"));
+        communityDirectory.add(new Community("asd", 123, "aasd", "Chennai", "asd", "asda"));
+        communityDirectory.add(new Community("asd", 123, "aasd", "Bangalore", "asd", "asda"));
         
         
         
@@ -290,7 +290,7 @@ public class MainJFrame extends javax.swing.JFrame {
             text+="</html>";
             lblWelcomeText.setText(text);
             
-            SystemAdminDashboardJPanel adminDashboardJPanel = new SystemAdminDashboardJPanel(patientDirectory,doctorDirectory,hospitalDirectory,communityDirectory);
+            SystemAdminDashboardJPanel adminDashboardJPanel = new SystemAdminDashboardJPanel(patientDirectory,doctorDirectory,hospitalDirectory,communityDirectory,encounterDirectory,houseDirectory,cityDirectory);
             splitPane.setRightComponent(adminDashboardJPanel);
             
         }
@@ -304,7 +304,7 @@ public class MainJFrame extends javax.swing.JFrame {
             text+="Admin";
             text+="</html>";
             lblWelcomeText.setText(text);
-            HospitalAdminDashboardJPanel hospitalAdminDashboardJPanel = new HospitalAdminDashboardJPanel(patientDirectory,doctorDirectory,hospitalDirectory,communityDirectory);
+            HospitalAdminDashboardJPanel hospitalAdminDashboardJPanel = new HospitalAdminDashboardJPanel(patientDirectory,doctorDirectory,hospitalDirectory,communityDirectory,encounterDirectory,houseDirectory,cityDirectory);
             splitPane.setRightComponent(hospitalAdminDashboardJPanel);
         }
         
@@ -328,7 +328,7 @@ public class MainJFrame extends javax.swing.JFrame {
             text+=username;
             text+="</html>";
             lblWelcomeText.setText(text);
-            PatientJPanel patientJPanel = new PatientJPanel(patientDirectory, doctorDirectory, communityDirectory,encounterDirectory,username);
+            PatientJPanel patientJPanel = new PatientJPanel(patientDirectory, doctorDirectory, communityDirectory,encounterDirectory,houseDirectory,username);
             splitPane.setRightComponent(patientJPanel);
         }
         

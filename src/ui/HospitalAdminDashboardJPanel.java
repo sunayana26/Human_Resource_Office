@@ -196,7 +196,7 @@ public class HospitalAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitPaneDoctor.setLeftComponent(splitNavigation1);
 
-        splitWorkspace1.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace1.setBackground(new java.awt.Color(202, 233, 159));
 
         javax.swing.GroupLayout splitWorkspace1Layout = new javax.swing.GroupLayout(splitWorkspace1);
         splitWorkspace1.setLayout(splitWorkspace1Layout);
@@ -268,7 +268,7 @@ public class HospitalAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitPaneHospital.setLeftComponent(splitNavigation2);
 
-        splitWorkspace2.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace2.setBackground(new java.awt.Color(202, 233, 159));
 
         javax.swing.GroupLayout splitWorkspace2Layout = new javax.swing.GroupLayout(splitWorkspace2);
         splitWorkspace2.setLayout(splitWorkspace2Layout);
@@ -340,7 +340,7 @@ public class HospitalAdminDashboardJPanel extends javax.swing.JPanel {
 
         splitPaneEncounter.setLeftComponent(splitNavigation3);
 
-        splitWorkspace3.setBackground(new java.awt.Color(204, 204, 255));
+        splitWorkspace3.setBackground(new java.awt.Color(202, 233, 159));
 
         javax.swing.GroupLayout splitWorkspace3Layout = new javax.swing.GroupLayout(splitWorkspace3);
         splitWorkspace3.setLayout(splitWorkspace3Layout);

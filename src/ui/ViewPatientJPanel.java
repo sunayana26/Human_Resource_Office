@@ -327,8 +327,19 @@ public class ViewPatientJPanel extends javax.swing.JPanel {
         } else {
             patientDirectory.delete(selectedRow);
             populateTable();
-            JOptionPane.showMessageDialog(this, "Employee Deleted");
+            JOptionPane.showMessageDialog(this, "Patient Deleted");
         }
+        txtName.setText("");
+        txtUsername.setText("");
+        txtAge.setValue(18);
+        drpGender.setSelectedItem("Male");
+        txtUsername.setText("");
+        txtEmailAddress.setText("");
+        txtCellPhoneNumber.setText("");
+        txtUsername.setText("");
+        txtPassword.setText("");
+        txtDisease.setText("");
+
     }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnReadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReadActionPerformed

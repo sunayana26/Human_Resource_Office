@@ -267,7 +267,7 @@
                 <Container class="javax.swing.JPanel" name="splitWorkspace1">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                      <Color blue="9f" green="e9" red="ca" type="rgb"/>
                     </Property>
                   </Properties>
                   <Constraints>
@@ -386,7 +386,7 @@
                 <Container class="javax.swing.JPanel" name="splitWorkspace2">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                      <Color blue="9f" green="e9" red="ca" type="rgb"/>
                     </Property>
                   </Properties>
                   <Constraints>
@@ -505,7 +505,7 @@
                 <Container class="javax.swing.JPanel" name="splitWorkspace3">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="cc" red="cc" type="rgb"/>
+                      <Color blue="9f" green="e9" red="ca" type="rgb"/>
                     </Property>
                   </Properties>
                   <Constraints>
